@@ -5,7 +5,7 @@ import Search from '../../assets/Search';
 import Arrow from '../../assets/Arrow';
 import SellButton from '../../assets/SellButton';
 import SellButtonPlus from '../../assets/SellButtonPlus';
-import { AuthContext,firebaseContext } from '../../Store/FirebaseContext';
+import { AuthContext } from '../../Store/FirebaseContext';
 import {getAuth} from 'firebase/auth';
 import {useHistory} from 'react-router-dom'
 
@@ -13,7 +13,6 @@ function Header() {
   const history = useHistory()
   const auth = getAuth()
   const {user} = useContext(AuthContext)
-  const {firebase} = useContext(firebaseContext)
   return (
     <div className="headerParentDiv">
       <div className="headerChildDiv">
@@ -49,11 +48,10 @@ function Header() {
         {user && <span onClick={()=>{
           auth.signOut().then(() => {
               history.push('/login')
-            // Sign-out successful.
           }).catch((error) => {
-            // An error happened.
+            alert(error.message)
           });
-        }}>logout</span>}
+        }} style={{cursor:"pointer"}}>logout</span>}
 
         <div className="sellMenu">
           <SellButton></SellButton>

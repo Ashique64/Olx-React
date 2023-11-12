@@ -28,7 +28,7 @@ createUserWithEmailAndPassword(auth, email, password)
   
     const colRef = collection(db,'users') 
      await addDoc(colRef , {
-      name:userName,
+    name:userName,
     id:userCredential.user.uid,
     phone:userPhone
     }).then(()=>{

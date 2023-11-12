@@ -16,8 +16,7 @@ console.log(post,'post');
 useEffect(async()=>{
   const {userId} = post
         const res = doc(db,'users',userId)
-        const docSnap = await getDoc(res)
-       console.log(docSnap,'succes');  
+        const docSnap = await getDoc(res)  
 },[])
 
   return (

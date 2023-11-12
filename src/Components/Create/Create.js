@@ -24,10 +24,8 @@ const Create = () => {
   const history = useHistory()
 
   const handleSubmit =()=>{
-  //   const ImagesRef = ref(storage, `/image/${image.name }`)
-  // console.log(ImagesRef,'inage');
   const imageRef = ref(storage ,  `/image/${image.name }`)
- const fileUrl =uploadBytes(imageRef,image).then(()=>{
+  const fileUrl =uploadBytes(imageRef,image).then(()=>{
 getDownloadURL(imageRef).then(async(url)=>{
   const colRef = collection(db,'products') 
 

@@ -8,7 +8,7 @@ import { PostContext } from '../../Store/PostContext';
 
 function Posts() {
 
-  const {setPost} = useContext(PostContext)
+const {setPost} = useContext(PostContext)
 const {db} = useContext(firebaseContext)
 
 const [products,setProducts] = useState([])
@@ -83,7 +83,7 @@ const history = useHistory()
               <p className="name"> YAMAHA R15V3</p>
             </div>
             <div className="date">
-              <span>10/5/2021</span>
+              <span>09/11/2023</span>
             </div>
           </div>
         </div>

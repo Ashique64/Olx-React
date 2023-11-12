@@ -19,11 +19,10 @@ const password = userPassword
 
 signInWithEmailAndPassword(auth,email,password)
 .then((cred)=>{
- console.log(cred.user,'user');
+ console.log(cred.user);
  history.push('/')
 })
 .catch((error)=>{
-  console.log(error,'err');
   setError(error.message)
 
 })
